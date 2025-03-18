@@ -13,10 +13,9 @@ function transporMatriz(A){
         for(let i = 0; i < A.length; i++){
             linha += A[i][j] + "\t";
         }
-        console.log()
+        console.log(linha)
     }
 }
-
 
 /*
     1 2
