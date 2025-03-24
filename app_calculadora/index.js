@@ -7,6 +7,22 @@ app.get('/', (req, res)=>{
     res.send('Hello, World!');
 });
 
+app.get('/somar/:a/:b', (req, res)=>{
+    res.send('Hello, World!');
+});
+
+app.get('/subtrair/:a/:b', (req, res)=>{
+    res.send('Hello, World!');
+});
+
+app.get('/multiplicar/:a/:b', (req, res)=>{
+    res.send('Hello, World!');
+});
+
+app.get('/dividir/:a/:b', (req, res)=>{
+    res.send('Hello, World!');
+});
+
 app.get('/ola/:nome', (req, res)=>{
     res.send(`Olá, ${req.params.nome}!`);
 });
