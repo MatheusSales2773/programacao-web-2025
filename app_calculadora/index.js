@@ -8,19 +8,23 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/somar/:a/:b', (req, res)=>{
-    res.send('Hello, World!');
+    const { a, b } = req.params;
+    res.send('Resultado: ${calc.somar(Number(a), Number(b))}');
 });
 
 app.get('/subtrair/:a/:b', (req, res)=>{
-    res.send('Hello, World!');
+    const { a, b } = req.params;
+    res.send('Resultado: ${calc.subtrair(Number(a), Number(b))}');
 });
 
 app.get('/multiplicar/:a/:b', (req, res)=>{
-    res.send('Hello, World!');
+    const { a, b } = req.params;
+    res.send('Resultado: ${calc.multiplicar(Number(a), Number(b))}');
 });
 
 app.get('/dividir/:a/:b', (req, res)=>{
-    res.send('Hello, World!');
+    const { a, b } = req.params;
+    res.send('Resultado: ${calc.dividir(Number(a), Number(b))}');
 });
 
 app.get('/ola/:nome', (req, res)=>{
