@@ -1,0 +1,6 @@
+cd Desktop - Entrar no Desktop
+git clone "Link do git" - Clonar o repositório
+ls - Listar a pasta
+cd "pasta do repositório" - Entrar no Repositório
+git config user.name "Nome de usuário do git" - Configurar o nome de usuário
+git config user.email "Email de usuário do git" - Configurar o email de usuário
