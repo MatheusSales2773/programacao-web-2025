@@ -4,28 +4,41 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res)=>{
-    res.send('Hello, World!');
+    let html = '<h1>app_calculadora</h1>';
+    html += '<h3>Rotas disponíveis</h3>';
+    html += '<p>/somar/:a/:b <a href="/somar/1/2">testar</a> </p>';
+    html += '<p>/subtrair/:a/:b <a href="/subtrair/1/2">testar</a> </p>';
+    html += '<p>/multiplicar/:a/:b <a href="/multiplicar/1/2">testar</a> </p>';
+    html += '<p>/dividir/:a/:b <a href="/dividir/1/2">testar</a> </p>';
+    res.send(html);
 });
 
 app.get('/somar/:a/:b', (req, res)=>{
-    const { a, b } = req.params;
-    res.send('Resultado: ${calc.somar(Number(a), Number(b))}');
+    let a = Number(req.params.a);
+    let b = Number(req.params.b);
+    res.send(`${a} + ${b} = ${calc.somar(a,b)}`);
 });
 
 app.get('/subtrair/:a/:b', (req, res)=>{
-    const { a, b } = req.params;
-    res.send('Resultado: ${calc.subtrair(Number(a), Number(b))}');
+    let a = Number(req.params.a);
+    let b = Number(req.params.b);
+    res.send(`${a} - ${b} = ${calc.subtrair(a,b)}`);
 });
+
 
 app.get('/multiplicar/:a/:b', (req, res)=>{
-    const { a, b } = req.params;
-    res.send('Resultado: ${calc.multiplicar(Number(a), Number(b))}');
+    let a = Number(req.params.a);
+    let b = Number(req.params.b);
+    res.send(`${a} * ${b} = ${calc.multiplicar(a,b)}`);
 });
 
+
 app.get('/dividir/:a/:b', (req, res)=>{
-    const { a, b } = req.params;
-    res.send('Resultado: ${calc.dividir(Number(a), Number(b))}');
+    let a = Number(req.params.a);
+    let b = Number(req.params.b);
+    res.send(`${a} / ${b} = ${calc.dividir(a,b)}`);
 });
+
 
 app.get('/ola/:nome', (req, res)=>{
     res.send(`Olá, ${req.params.nome}!`);
@@ -33,5 +46,5 @@ app.get('/ola/:nome', (req, res)=>{
 
 const PORT = 8080;
 app.listen(PORT, ()=>{
-    console.log('app rodando na porta' + PORT);
+    console.log(`app rodando na porta ${PORT}`);
 });

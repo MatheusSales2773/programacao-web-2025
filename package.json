@@ -1,0 +1,19 @@
+{
+  "name": "programacao-web-2025",
+  "version": "1.0.0",
+  "description": "Repósitorio para matéria de Extensão - Programação para Web da Universidade Católica de Brasília(UCB).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusSales2773/programacao-web-2025.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusSales2773/programacao-web-2025/issues"
+  },
+  "homepage": "https://github.com/MatheusSales2773/programacao-web-2025#readme"
+}
