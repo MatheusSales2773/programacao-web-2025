@@ -11,7 +11,7 @@ Este repositório contém atividades e projetos desenvolvidos na disciplina de *
 ### 🚀 Projetos
 - **app_calculadora/** – Aplicação de calculadora desenvolvida utilizando JavaScript.
 - **Praticando/** – Projetos extras e códigos de prática para reforço dos conceitos aprendidos.
-- **app_stoque/** - Aplicação de um estoque desenvovido utilizando JavaScript.
+- **app_estoque/** - Aplicação de um estoque desenvovido utilizando JavaScript.
 
 ### 🛠 Outros Arquivos
 - **rascunho/** – Códigos e testes temporários.
