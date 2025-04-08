@@ -2,5 +2,9 @@ cd "pasta do arquivo" - achar pasta do arquivo
 node "nome do arquivo" - rodar o arquivo
 
 npm init - adicionar o package.json
-npm install express@4.18.2 - instalar o pacote express
+npm install express@4.21.2 - instalar o pacote express
 Ctrl + c - Mata o processo em execução
+
+ctrl c mata o processo
+
+Node "nome projeto"
