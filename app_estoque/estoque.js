@@ -9,7 +9,17 @@ function listar(){
     return itens;
 }
 
+function editar(id, qtd){
+    itens.forEach(item_cadastrado => {
+        if(item_cadastrado.id == id){
+            item_cadastrado.qtd = qtd;
+        } 
+    });
+    return true;
+}
+
 module.exports = {
     adicionar,
-    listar
+    listar,
+    editar
 };
