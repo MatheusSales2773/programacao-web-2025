@@ -25,7 +25,7 @@ app.get('/adicionar/:id/:nome/:qtd', (req, res)=>{
 // /listar
 app.get('/listar', (req, res)=>{
     res.send(estoque.listar());
-})
+});
 // /remover/:id
 
 // /editar/:id

@@ -64,7 +64,7 @@ function is_id_cadastrado(id){
 }
 
 function is_numerico(n){
-    if(isNan(n) || n == null){
+    if(isNaN(n) || n == null){
         return false;
     }
     return true;
