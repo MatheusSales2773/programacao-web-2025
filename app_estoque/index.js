@@ -16,17 +16,24 @@ app.get('/', (req, res)=>{
 app.get('/adicionar/:id/:nome/:qtd', (req, res)=>{
     let item = {
         id: Number(req.params.id),
-        id: req.params.id.nome,
-        id: Number(req.params.id.qtd)
+        nome: req.params.nome,
+        qtd: Number(req.params.qtd)
     };
-    res.send(estoque.adicionar(item));
+    let resultado = estoque.adicionar(item);
+    res.send(resultado ? 'Item adicionado com sucesso!' : 'Erro ao adicionar item.');
 });
 
 // /listar
 app.get('/listar', (req, res)=>{
     res.send(estoque.listar());
 });
+
 // /remover/:id
+app.get('/remover/:id', (req, res)=>{
+    let id = Number(req.params.id);
+    let resultado = estoque.remover(id);
+    res.send(resultado ? 'Item removido com sucesso!' : 'Erro ao remover item.');
+})
 
 // /editar/:id
 app.get('/editar/:id/:qtd', (req, res)=>{

@@ -9,7 +9,7 @@ function adicionar(item){
         item.id <= 0 ||
         !is_numerico(item.qtd) ||
         item.qtd < 0 ||
-        item_nome.length <= 0
+        item.nome.length <= 0
     ){
         item_valido = false
     }
@@ -23,6 +23,14 @@ function adicionar(item){
 
 function listar(){
     return itens;
+}
+
+function remover(id) {
+    if (!is_numerico(id) || !is_id_cadastrado(id)) {
+        return false;
+    }
+    itens = itens.filter(item => item.id != id);
+    return true;
 }
 
 function editar(id, qtd){
@@ -50,17 +58,12 @@ function editar(id, qtd){
 module.exports = {
     adicionar,
     listar,
-    editar
+    editar,
+    remover
 };
 
-function is_id_cadastrado(id){
-    let id_cadastrado = false;
-    itens.forEach(item_cadastrado => {
-        if(item_cadastrado.id == id){
-            item_cadastrado = true;
-        } 
-    });
-    return id_cadastrado;
+function is_id_cadastrado(id) {
+    return itens.some(item => item.id == id);
 }
 
 function is_numerico(n){
