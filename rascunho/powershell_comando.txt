@@ -4,7 +4,8 @@ node "nome do arquivo" - rodar o arquivo
 npm init - adicionar o package.json
 npm install express@4.21.2 - instalar o pacote express
 Ctrl + c - Mata o processo em execução
-
-ctrl c mata o processo
+Code . - abre o vscode direto do powershell
 
 Node "nome projeto"
+
+npm install mustache-express@1.3.2 - framework que renderiza arquivo html
